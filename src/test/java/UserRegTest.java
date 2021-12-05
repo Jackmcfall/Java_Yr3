@@ -8,4 +8,11 @@ public class UserRegTest{
         assertThrows(IllegalArgumentException.class, this::passwordIsValidTest);
     }
 
+    @Test
+    public void emailIsValidTest(){
+        UserReg test = new UserReg();
+        assertThrows(IllegalArgumentException.class, this::emailIsValidTest);
+    }
+
+
 }
