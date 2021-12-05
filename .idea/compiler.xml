@@ -9,5 +9,6 @@
         <module name="Java_A03" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="15" />
   </component>
 </project>
