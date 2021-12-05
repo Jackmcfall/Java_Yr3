@@ -8,7 +8,6 @@ public class UserReg extends JFrame {
     private final JTextField email;
     private final JPasswordField passwordField;
     private final JButton btnNewButton;
-    String password = "hi";
     String p = "^(?=.{7,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@^&!]).*$";
     String regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
 
@@ -27,6 +26,7 @@ public class UserReg extends JFrame {
 
 
     public boolean passwordIsValid(){
+        String password = passwordField.getText();
         Pattern pattern = Pattern.compile(p);
         Matcher matcher = pattern.matcher(passwordField.getText());
         if (!password.matches(p)){
@@ -99,10 +99,11 @@ public class UserReg extends JFrame {
             else{
                 JOptionPane.showMessageDialog(btnNewButton, "Successfully signed up!");
             }
+        });
 
-
-
-    });
+        btnNewButton.setFont(new Font("Ariel", Font.PLAIN, 22));
+        btnNewButton.setBounds(399, 447, 259, 74);
+        contentPane.add(btnNewButton);
 
 
 
