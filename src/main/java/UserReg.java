@@ -12,6 +12,19 @@ public class UserReg extends JFrame {
     String p = "^(?=.{7,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@^&!]).*$";
     String regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
 
+    public static void main(String[] args) {
+        EventQueue.invokeLater(() -> {
+            try {
+                UserReg frame = new UserReg();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+
+
 
     public boolean passwordIsValid(){
         Pattern pattern = Pattern.compile(p);
@@ -91,4 +104,13 @@ public class UserReg extends JFrame {
 
     });
 
+
+
+
 }}
+
+
+
+
+
+
